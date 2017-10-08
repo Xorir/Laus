@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE07C60A6A46B5B05DB41F40 /* Pods_Laus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */; };
 		D2063FC21F89CB810064497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2063FC11F89CB810064497F /* AppDelegate.swift */; };
 		D2063FC41F89CB810064497F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2063FC31F89CB810064497F /* ViewController.swift */; };
 		D2063FC71F89CB810064497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2063FC51F89CB810064497F /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		959B86E5C03530C6C81064F8 /* Pods-Laus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Laus/Pods-Laus.release.xcconfig"; sourceTree = "<group>"; };
+		CBA07EB8790969882F754218 /* Pods-Laus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Laus/Pods-Laus.debug.xcconfig"; sourceTree = "<group>"; };
 		D2063FBE1F89CB810064497F /* Laus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Laus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2063FC11F89CB810064497F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2063FC31F89CB810064497F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		D2063FC81F89CB810064497F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2063FCB1F89CB810064497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2063FCD1F89CB810064497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Laus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE07C60A6A46B5B05DB41F40 /* Pods_Laus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34D63E5D61040078A7556607 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBA07EB8790969882F754218 /* Pods-Laus.debug.xcconfig */,
+				959B86E5C03530C6C81064F8 /* Pods-Laus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D2063FB51F89CB810064497F = {
 			isa = PBXGroup;
 			children = (
 				D2063FC01F89CB810064497F /* Laus */,
 				D2063FBF1F89CB810064497F /* Products */,
+				34D63E5D61040078A7556607 /* Pods */,
+				EF634E194BE299E713EF245E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = Laus;
 			sourceTree = "<group>";
 		};
+		EF634E194BE299E713EF245E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2063FD01F89CB810064497F /* Build configuration list for PBXNativeTarget "Laus" */;
 			buildPhases = (
+				797886C61A7874AAC9A78D77 /* [CP] Check Pods Manifest.lock */,
 				D2063FBA1F89CB810064497F /* Sources */,
 				D2063FBB1F89CB810064497F /* Frameworks */,
 				D2063FBC1F89CB810064497F /* Resources */,
+				9162D1AF174048A1EF59A9D0 /* [CP] Embed Pods Frameworks */,
+				3EF636D9401610E7B87BAD4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EF636D9401610E7B87BAD4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Laus/Pods-Laus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797886C61A7874AAC9A78D77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9162D1AF174048A1EF59A9D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Laus/Pods-Laus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2063FBA1F89CB810064497F /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		D2063FD11F89CB810064497F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA07EB8790969882F754218 /* Pods-Laus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X5NHG8EC8E;
@@ -272,6 +348,7 @@
 		};
 		D2063FD21F89CB810064497F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959B86E5C03530C6C81064F8 /* Pods-Laus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X5NHG8EC8E;

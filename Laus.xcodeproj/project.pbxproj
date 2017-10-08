@@ -13,6 +13,7 @@
 		D2063FC71F89CB810064497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2063FC51F89CB810064497F /* Main.storyboard */; };
 		D2063FC91F89CB810064497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2063FC81F89CB810064497F /* Assets.xcassets */; };
 		D2063FCC1F89CB810064497F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2063FCA1F89CB810064497F /* LaunchScreen.storyboard */; };
+		D2063FD41F89E2150064497F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2063FD31F89E2150064497F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D2063FC81F89CB810064497F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2063FCB1F89CB810064497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2063FCD1F89CB810064497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2063FD31F89E2150064497F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Laus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				D2063FC81F89CB810064497F /* Assets.xcassets */,
 				D2063FCA1F89CB810064497F /* LaunchScreen.storyboard */,
 				D2063FCD1F89CB810064497F /* Info.plist */,
+				D2063FD31F89E2150064497F /* GoogleService-Info.plist */,
 			);
 			path = Laus;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				D2063FCC1F89CB810064497F /* LaunchScreen.storyboard in Resources */,
 				D2063FC91F89CB810064497F /* Assets.xcassets in Resources */,
+				D2063FD41F89E2150064497F /* GoogleService-Info.plist in Resources */,
 				D2063FC71F89CB810064497F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9162D1AF174048A1EF59A9D0 /* [CP] Embed Pods Frameworks */ = {
@@ -379,6 +383,7 @@
 				D2063FD21F89CB810064497F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

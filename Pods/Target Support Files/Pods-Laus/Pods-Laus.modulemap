@@ -1,0 +1,6 @@
+framework module Pods_Laus {
+  umbrella header "Pods-Laus-umbrella.h"
+
+  export *
+  module * { export * }
+}

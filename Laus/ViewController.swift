@@ -7,20 +7,37 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FirebaseCore
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //develop
+        let facebookLoginButton = FBSDKLoginButton()
+        facebookLoginButton.delegate = self
+        view.addSubview(facebookLoginButton)
+        
+        facebookLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        facebookLoginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        facebookLoginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        facebookLoginButton.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        facebookLoginButton.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 10).isActive = true
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Did log out of facebook")
     }
-
-
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+            return
+        }
+        
+        print("Succesfully logged in")
+    }
+    
 }
 

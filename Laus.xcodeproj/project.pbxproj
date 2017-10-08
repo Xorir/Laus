@@ -27,6 +27,7 @@
 		D2063FCB1F89CB810064497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2063FCD1F89CB810064497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2063FD31F89E2150064497F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D2063FD51F89ED680064497F /* Laus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Laus.entitlements; sourceTree = "<group>"; };
 		F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Laus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +73,7 @@
 		D2063FC01F89CB810064497F /* Laus */ = {
 			isa = PBXGroup;
 			children = (
+				D2063FD51F89ED680064497F /* Laus.entitlements */,
 				D2063FC11F89CB810064497F /* AppDelegate.swift */,
 				D2063FC31F89CB810064497F /* ViewController.swift */,
 				D2063FC51F89CB810064497F /* Main.storyboard */,
@@ -128,6 +130,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = X5NHG8EC8E;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -341,6 +348,7 @@
 			baseConfigurationReference = CBA07EB8790969882F754218 /* Pods-Laus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Laus/Laus.entitlements;
 				DEVELOPMENT_TEAM = X5NHG8EC8E;
 				INFOPLIST_FILE = Laus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +363,7 @@
 			baseConfigurationReference = 959B86E5C03530C6C81064F8 /* Pods-Laus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Laus/Laus.entitlements;
 				DEVELOPMENT_TEAM = X5NHG8EC8E;
 				INFOPLIST_FILE = Laus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

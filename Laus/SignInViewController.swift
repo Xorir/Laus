@@ -85,8 +85,9 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func presentMainViewCOntroller() {
         let mainViewController = MainViewController()
+        let navigationController = UINavigationController(rootViewController: mainViewController)
         mainViewController.title = "Darn Main"
-        self.present(mainViewController, animated: true, completion: nil)
+        self.present(navigationController, animated: true, completion: nil)
     }
 }
 

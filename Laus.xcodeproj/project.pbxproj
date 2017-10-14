@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		BE07C60A6A46B5B05DB41F40 /* Pods_Laus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */; };
 		D2063FC21F89CB810064497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2063FC11F89CB810064497F /* AppDelegate.swift */; };
-		D2063FC41F89CB810064497F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2063FC31F89CB810064497F /* ViewController.swift */; };
+		D2063FC41F89CB810064497F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2063FC31F89CB810064497F /* SignInViewController.swift */; };
 		D2063FC71F89CB810064497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2063FC51F89CB810064497F /* Main.storyboard */; };
 		D2063FC91F89CB810064497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2063FC81F89CB810064497F /* Assets.xcassets */; };
 		D2063FCC1F89CB810064497F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2063FCA1F89CB810064497F /* LaunchScreen.storyboard */; };
 		D2063FD41F89E2150064497F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2063FD31F89E2150064497F /* GoogleService-Info.plist */; };
+		D25E7CA21F91B24F00E36AEB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E7CA11F91B24F00E36AEB /* AppState.swift */; };
+		D25E7CA51F91C60800E36AEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E7CA41F91C60800E36AEB /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,15 @@
 		CBA07EB8790969882F754218 /* Pods-Laus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Laus/Pods-Laus.debug.xcconfig"; sourceTree = "<group>"; };
 		D2063FBE1F89CB810064497F /* Laus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Laus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2063FC11F89CB810064497F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2063FC31F89CB810064497F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2063FC31F89CB810064497F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D2063FC61F89CB810064497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2063FC81F89CB810064497F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2063FCB1F89CB810064497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2063FCD1F89CB810064497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2063FD31F89E2150064497F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D2063FD51F89ED680064497F /* Laus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Laus.entitlements; sourceTree = "<group>"; };
+		D25E7CA11F91B24F00E36AEB /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = Singleton/AppState.swift; sourceTree = "<group>"; };
+		D25E7CA41F91C60800E36AEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MainViewController/MainViewController.swift; sourceTree = "<group>"; };
 		F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Laus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,9 +77,11 @@
 		D2063FC01F89CB810064497F /* Laus */ = {
 			isa = PBXGroup;
 			children = (
+				D25E7CA31F91C5CE00E36AEB /* MainViewController */,
+				D25E7CA01F91B22900E36AEB /* Singleton */,
 				D2063FD51F89ED680064497F /* Laus.entitlements */,
 				D2063FC11F89CB810064497F /* AppDelegate.swift */,
-				D2063FC31F89CB810064497F /* ViewController.swift */,
+				D2063FC31F89CB810064497F /* SignInViewController.swift */,
 				D2063FC51F89CB810064497F /* Main.storyboard */,
 				D2063FC81F89CB810064497F /* Assets.xcassets */,
 				D2063FCA1F89CB810064497F /* LaunchScreen.storyboard */,
@@ -83,6 +89,22 @@
 				D2063FD31F89E2150064497F /* GoogleService-Info.plist */,
 			);
 			path = Laus;
+			sourceTree = "<group>";
+		};
+		D25E7CA01F91B22900E36AEB /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				D25E7CA11F91B24F00E36AEB /* AppState.swift */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		D25E7CA31F91C5CE00E36AEB /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D25E7CA41F91C60800E36AEB /* MainViewController.swift */,
+			);
+			name = MainViewController;
 			sourceTree = "<group>";
 		};
 		EF634E194BE299E713EF245E /* Frameworks */ = {
@@ -223,8 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2063FC41F89CB810064497F /* ViewController.swift in Sources */,
+				D25E7CA21F91B24F00E36AEB /* AppState.swift in Sources */,
+				D2063FC41F89CB810064497F /* SignInViewController.swift in Sources */,
 				D2063FC21F89CB810064497F /* AppDelegate.swift in Sources */,
+				D25E7CA51F91C60800E36AEB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

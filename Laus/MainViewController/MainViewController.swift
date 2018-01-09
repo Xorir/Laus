@@ -8,8 +8,17 @@
 
 import UIKit
 import FBSDKLoginKit
+import FBSDKCoreKit
+import FirebaseCore
+import Firebase
+
+protocol FireBaseSignOutDelegate {
+    func signOutFireBaseUser()
+}
 
 class MainViewController: UIViewController {
+    
+    var delegate: FireBaseSignOutDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +28,8 @@ class MainViewController: UIViewController {
     }
     
     func dismissViewController() {
-        self.dismiss(animated: true) { 
-            
-        }
+        self.dismiss(animated: true) { }
+        delegate?.signOutFireBaseUser()
     }
     
 }

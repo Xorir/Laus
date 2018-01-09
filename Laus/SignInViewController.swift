@@ -12,7 +12,7 @@ import FBSDKCoreKit
 import FirebaseCore
 import Firebase
 
-class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
+class SignInViewController: UIViewController, FBSDKLoginButtonDelegate, FireBaseSignOutDelegate {
     
     private struct Constants {
         static let padding: CGFloat = 16.0
@@ -42,6 +42,17 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Did log out of facebook")
+    }
+    
+    func signOutFireBaseUser() {
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch {
+            print("log out error")
+        }
+        
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -87,6 +98,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         let mainViewController = MainViewController()
         let navigationController = UINavigationController(rootViewController: mainViewController)
         mainViewController.title = "Darn Main"
+        mainViewController.delegate = self
         self.present(navigationController, animated: true, completion: nil)
     }
 }

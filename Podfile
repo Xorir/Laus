@@ -14,6 +14,7 @@ pod 'Bolts'
 pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
+pod 'FacebookLogin'
 			
   # Pods for Laus
 

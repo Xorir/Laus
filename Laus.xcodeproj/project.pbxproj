@@ -14,8 +14,10 @@
 		D2063FC91F89CB810064497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2063FC81F89CB810064497F /* Assets.xcassets */; };
 		D2063FCC1F89CB810064497F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2063FCA1F89CB810064497F /* LaunchScreen.storyboard */; };
 		D2063FD41F89E2150064497F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2063FD31F89E2150064497F /* GoogleService-Info.plist */; };
+		D20705E320057AD9008E7E0D /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20705E220057AD9008E7E0D /* UserLocationManager.swift */; };
 		D25E7CA21F91B24F00E36AEB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E7CA11F91B24F00E36AEB /* AppState.swift */; };
 		D25E7CA51F91C60800E36AEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E7CA41F91C60800E36AEB /* MainViewController.swift */; };
+		D2A99E73209D850C00671E5A /* LausMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A99E72209D850C00671E5A /* LausMainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,10 @@
 		D2063FCD1F89CB810064497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2063FD31F89E2150064497F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D2063FD51F89ED680064497F /* Laus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Laus.entitlements; sourceTree = "<group>"; };
+		D20705E220057AD9008E7E0D /* UserLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLocationManager.swift; path = Singleton/UserLocationManager.swift; sourceTree = "<group>"; };
 		D25E7CA11F91B24F00E36AEB /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = Singleton/AppState.swift; sourceTree = "<group>"; };
 		D25E7CA41F91C60800E36AEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MainViewController/MainViewController.swift; sourceTree = "<group>"; };
+		D2A99E72209D850C00671E5A /* LausMainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LausMainStoryboard.storyboard; sourceTree = "<group>"; };
 		F91DBCEEAF47C2AC6D4C6E31 /* Pods_Laus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Laus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,16 +81,17 @@
 		D2063FC01F89CB810064497F /* Laus */ = {
 			isa = PBXGroup;
 			children = (
+				D2A99E71209D821300671E5A /* SignInViewController */,
 				D25E7CA31F91C5CE00E36AEB /* MainViewController */,
 				D25E7CA01F91B22900E36AEB /* Singleton */,
 				D2063FD51F89ED680064497F /* Laus.entitlements */,
 				D2063FC11F89CB810064497F /* AppDelegate.swift */,
-				D2063FC31F89CB810064497F /* SignInViewController.swift */,
 				D2063FC51F89CB810064497F /* Main.storyboard */,
 				D2063FC81F89CB810064497F /* Assets.xcassets */,
 				D2063FCA1F89CB810064497F /* LaunchScreen.storyboard */,
 				D2063FCD1F89CB810064497F /* Info.plist */,
 				D2063FD31F89E2150064497F /* GoogleService-Info.plist */,
+				D2A99E72209D850C00671E5A /* LausMainStoryboard.storyboard */,
 			);
 			path = Laus;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D25E7CA11F91B24F00E36AEB /* AppState.swift */,
+				D20705E220057AD9008E7E0D /* UserLocationManager.swift */,
 			);
 			name = Singleton;
 			sourceTree = "<group>";
@@ -105,6 +111,14 @@
 				D25E7CA41F91C60800E36AEB /* MainViewController.swift */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		D2A99E71209D821300671E5A /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D2063FC31F89CB810064497F /* SignInViewController.swift */,
+			);
+			name = SignInViewController;
 			sourceTree = "<group>";
 		};
 		EF634E194BE299E713EF245E /* Frameworks */ = {
@@ -185,6 +199,7 @@
 			files = (
 				D2063FCC1F89CB810064497F /* LaunchScreen.storyboard in Resources */,
 				D2063FC91F89CB810064497F /* Assets.xcassets in Resources */,
+				D2A99E73209D850C00671E5A /* LausMainStoryboard.storyboard in Resources */,
 				D2063FD41F89E2150064497F /* GoogleService-Info.plist in Resources */,
 				D2063FC71F89CB810064497F /* Main.storyboard in Resources */,
 			);
@@ -214,13 +229,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Laus-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9162D1AF174048A1EF59A9D0 /* [CP] Embed Pods Frameworks */ = {
@@ -229,9 +247,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Laus/Pods-Laus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -245,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20705E320057AD9008E7E0D /* UserLocationManager.swift in Sources */,
 				D25E7CA21F91B24F00E36AEB /* AppState.swift in Sources */,
 				D2063FC41F89CB810064497F /* SignInViewController.swift in Sources */,
 				D2063FC21F89CB810064497F /* AppDelegate.swift in Sources */,
